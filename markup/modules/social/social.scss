@@ -1,0 +1,23 @@
+.social {
+    margin: 2px 0 0;
+    padding: 0;
+    float: right;
+    list-style: none;
+    font-size: 34px;
+    @include max-screen(639px) {
+        float: none;
+        text-align: center;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        line-height: 1;
+        display: block;
+        color: #00a7e7;
+    }
+    .icon {
+        height: 1em;
+        width: auto;
+    }
+}

@@ -1,0 +1,122 @@
+//
+// slide-one
+//
+
+.section.slide-one {
+	background: $bg-slide-one;
+
+	.row {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.col-left,
+	.col-right {
+		padding: 0 15px;
+		margin-right: -0.34em;
+		white-space: normal;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.col-left {
+		width: 58.3333%;
+	}
+	.col-right {
+		width: 41.6666%;
+	}
+	@include max-screen(1023px) {
+		.col-left,
+		.col-right {
+			width: 100%;
+		}
+		.col-right {
+			text-align: center;
+		}
+	}
+
+	h1 {
+		line-height: 1.1;
+		font-size: 30px;
+		font-family: $ff-FredokaOne;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		text-align: left;
+		margin: 0;
+		text-shadow: none;
+		color: #fff;
+		@include max-screen(1023px) {
+			font-size: 22px;
+			text-align: center;
+		}
+		@include max-screen(767px) {
+			font-size: 20px;
+		}
+		@include max-screen(480px) {
+			font-size: 16px;
+		}
+	}
+	h2 {
+		text-align: left;
+		text-transform: uppercase;
+		font-size: 125px;
+		line-height: 0.8;
+		margin: 50px 0 10px;
+		color: #fff;
+		font-family: $ff-FredokaOne;
+		text-shadow: 5px 10px 1px rgba(0,0,0,.1);
+		@include max-screen(1180px) {
+			font-size: 106px;
+		}
+		@include max-screen(1023px) {
+			margin-top: 28px;
+			font-size: 93px;
+			text-align: center;
+		}
+		@include max-screen(767px) {
+			margin-top: 18px;
+			font-size: 54px;
+		}
+		@include max-screen(480px) {
+			font-size: 50px;
+		}
+	}
+	h3 {
+		font-size: 138px;
+		line-height: 0.8;
+		margin: 18px 0 42px;
+		color: #fff;
+		font-family: $ff-FredokaOne;
+		text-shadow: 5px 10px 1px rgba(0,0,0,.1);
+		@include max-screen(1180px) {
+			font-size: 120px;
+		}
+		@include max-screen(1023px) {
+			font-size: 100px;
+			text-align: center;
+            margin-bottom: 20px;
+		}
+		@include max-screen(767px) {
+			font-size: 62px;
+			margin-bottom: 12px;
+		}
+		@include max-screen(480px) {
+			font-size: 58px;
+			margin-bottom: 8px;
+			margin-top: 12px;
+		}
+	}
+	p {
+		font-size: 22px;
+		line-height: 1.5;
+		@include max-screen(1023px) {
+			font-size: 16px;
+			text-align: center;
+		}
+		@include max-screen(767px) {
+			font-size: 14px;
+		}
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

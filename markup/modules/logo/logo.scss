@@ -1,0 +1,25 @@
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+
+	background: url('%=static=%logo.png');
+	background-image: url('%=static=%minified-svg/logo.svg'), none;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	text-indent: -9999px;
+
+	width: 150px;
+	height: 36px;
+
+	@include max-screen(767px) {
+		width: 44px;
+		background-size: 164px 44px;
+	}
+
+	a {
+		display: block;
+		height: 100%;
+	}
+
+}

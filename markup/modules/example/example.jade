@@ -1,0 +1,24 @@
+mixin example-list(data)
+	if !data
+		-data = {}
+	.example-list
+		each item, index in data
+			-item.index = index
+			.example-item
+				a(href="#modal-#{item.index}", data-toggle='modal', data-target='#modal-#{item.index}')&attributes({id: item.id})
+					.img.loading
+						img(class="lazy", data-src="%=staticPrefix=%images/content/#{item.img_thumb}",src="", alt="")
+					//- furure in future
+					//-.future
+						if item.future
+							if typeof item.future != 'string'
+								each future in item.future
+									+icon({name: future, class: "icon " + future})
+							else
+								+icon({name: item.future, class: "icon " + item.future})
+					.body
+						.title= item.title
+						if item.download
+							a(href="#") Download.zip
+				
+				+modal(item)

@@ -1,0 +1,113 @@
+//- Team.jade
+extends ../modules/layout/layout
+
+block title
+	title Markupus Team
+
+block vars
+	//-var page = 'careers';
+	//-wrapperClass = ''
+	//-bodyClass = ''
+	-page = 'team'
+
+
+block header
+	+header
+	
+block content
+	.container
+		h1.title.sep Team
+		
+		p.text-center View a short video to get to know us better
+		.embed-responsive-wrapper
+			| <div class="embed-responsive embed-responsive-16by9">
+			| 	<iframe class="embed-responsive-item" width="1280" height="720" src="https://www.youtube.com/embed/Elr_8RTRfbE?showinfo=0&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0" frameborder="0"  allowfullscreen></iframe>
+			| </div>
+		br
+		br
+		
+		h2.title.sep Our faces
+		+crew-list([
+			{
+				name: 'Serge Baidin',
+				img: 'img-crew-00.jpg',
+				prof: 'CEO'
+			},
+			{
+				name: 'Serge',
+				img: 'img-crew-13.jpg',
+				prof: 'CFO'
+			},
+			{
+				name: 'Alexander',
+				img: 'img-crew-03.jpg',
+				prof: 'Tech Director'
+			},
+			{
+				name: 'Ivan',
+				img: 'img-crew-01.jpg',
+				prof: 'Team Leader'
+			},
+			{
+				name: 'Sergey',
+				img: 'img-crew-06.jpg',
+				prof: 'Front end developer'
+			},
+			{
+				name: 'Ann',
+				img: 'img-crew-02.jpg',
+				prof: 'Front end developer',
+				class: 'style-women'
+			},
+			{
+				name: 'Sasha',
+				img: 'img-crew-04.jpg',
+				prof: 'Front end developer'
+			},
+			{
+				name: 'Nathaly',
+				img: 'img-crew-05.jpg',
+				prof: 'Front end developer',
+				class: 'style-women'
+			},
+		])
+		
+		
+		//- h2 Guys who are under projects now
+		//- +crew-under-projects-list([
+		//- 	{
+		//- 		name: 'Dmitriy',
+		//- 		img: 'img-crew-08-s.jpg',
+		//- 		prof: 'Front End Developer'
+		//- 	},
+		//- 	{
+		//- 		name: 'Alexey',
+		//- 		img: 'img-crew-09-s.jpg',
+		//- 		prof: 'Front End Developer'
+		//- 	},
+		//- 	{
+		//- 		name: 'Alexander',
+		//- 		img: 'img-crew-07-s.jpg',
+		//- 		prof: 'Front End Developer'
+		//- 	},
+		//- 	{
+		//- 		name: 'Dmitriy',
+		//- 		img: 'img-crew-10-s.jpg',
+		//- 		prof: 'Front End Developer'
+		//- 	},
+		//- 	{
+		//- 		name: 'Dmitriy',
+		//- 		img: 'img-crew-11-s.jpg',
+		//- 		prof: 'Front End Developer'
+		//- 	},
+		//- 	{
+		//- 		name: 'Yura',
+		//- 		img: 'img-crew-12-s.jpg',
+		//- 		prof: 'Front End Developer'
+		//- 	},
+		//- ])
+		
+		+need-info
+
+block footer
+	+footer

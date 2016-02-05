@@ -1,0 +1,38 @@
+mixin slide-four(data)
+    +section.slide-four
+        h2 Our technologies
+        ul
+            li
+                i.icon
+                    +icon({name: 'icon-html5-css3'})
+                | HTML5/CSS3 W3C valid hand-coded and accurately indented source files
+            li
+                i.icon
+                    +icon({name: 'icon-responcive'})
+                | Responsive in mind
+            li
+                i.icon
+                    +icon({name: 'icon-speedo'})
+                | Page load speed optimization
+            li
+                i.icon.icon-sass-less
+                    +icon({name: 'icon-sass-less'})
+                | SASS or LESS preprocessor
+            li
+                i.icon
+                    +icon({name: 'icon-jade'})
+                | Jade or HAML templating language
+            li
+                i.icon
+                    +icon({name: 'icon-bem'})
+                | BEM methodology
+            li
+                i.icon
+                    +icon({name: 'icon-bootstrap'})
+                | Twitter Bootstrap or Foundation frameworks (if needed)
+            li
+                i.icon
+                    +icon({name: 'icon-svg'})
+                | Vector Graphic (iconic fonts, SVG)
+            
+        +scroll-helper(4)

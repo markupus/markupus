@@ -1,0 +1,148 @@
+.nav {
+	float: right;
+	cursor: default;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		display: inline-block;
+		@include max-screen(767px) {
+			display: block;
+		}
+	}
+	a {
+		color: #fff;
+		font-size: 18px;
+		display: block;
+		padding:7px 12px;
+		&:hover {
+		}
+	}
+	.link {
+		text-decoration: none;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: '';
+			height: 2px;
+			left: 50%;
+			right: 50%;
+			background: #fff;
+			bottom: 6px;
+			opacity: 0;
+			transition: left 0.1s, right 0.1s, opacity 0.1s;
+		}
+		&:active,
+		&:hover {
+			&:after {
+				opacity: 0.6;
+				left: 12px;
+				right: 12px;
+			}
+			@include max-screen(767px) {
+				background: rgba(#ffffff, 0.6);
+				color: #00a7e7;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	.active {
+		.link {
+			&:after {
+				opacity: 0.8;
+				left: 12px;
+				right: 12px;
+			}
+			@include max-screen(767px) {
+				background: #fff;
+				color: #00a7e7;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	.nav-collapse {
+		display: inline-block;
+		margin-right: 12px;
+		vertical-align: top;
+		&.in {
+			display: inline-block;
+		}
+		@include max-screen(767px) {
+			margin-right: 0;
+			display: none;
+
+			position: absolute;
+			top: 100%;
+			right: 0;
+			width: 100%;
+			background: #00a7e7;
+			margin-top: 8px;
+			ul {
+				padding: 10px 0;
+			}
+			&.in,
+			&.collapsing {
+				display: block;
+			}
+		}
+	}
+	&-toggle {
+		margin-left: 12px;
+		display: none;
+		float: right;
+		padding: 8px 6px;
+		border: 2px solid #fff;
+		border-radius: 3px;
+		background-clip: padding-box;
+		background: none;
+		span {
+			height: 3px;
+			display: block;
+			width: 22px;
+			background: #fff;
+			border-radius: 1px;
+			margin-bottom: 4px;
+			&:last-child {
+				margin-bottom: 1px;
+			}
+		}
+		@include max-screen(767px) {
+			display: block;
+		}
+	}
+}
+
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
+
+.nav-collapse {
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-collapse.in {
+  overflow-y: auto;
+}

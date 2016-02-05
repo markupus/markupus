@@ -1,0 +1,60 @@
+.header {
+	background: $bg-header;
+	@include cf;
+	padding: 15px 0;
+
+	&.affix {
+		width: 100%;
+		z-index: 100;
+		& + .main {
+			margin-top: 69px;
+		}
+	}
+
+	.container {
+		position: relative;
+	}
+	.contactus {
+		display: inline-block;
+		padding: 5px 15px;
+		border: 2px solid #fff;
+		border-radius: 3px;
+		background-clip: padding-box;
+		&:hover {
+			color: #00a7e7;
+			background: #fff;
+			text-decoration: none;
+		}
+		.icon {
+			display: inline-block;
+			width: 27px;
+			height: 21px;
+			vertical-align: middle;
+			margin-right: 6px;
+		}
+	}
+}
+
+body.modal-open[style="padding-right: 17px;"] .header.affix {
+	padding-right: 17px;
+}
+
+.main-page {
+	&.fp-responsive {
+		header {
+			background: rgba($bg-header,.6);
+		}
+	}
+	header {
+		background: rgba($bg-header,.6);
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 10;
+	}
+
+	.header.affix + .main {
+		margin-top: 0;
+	}
+}

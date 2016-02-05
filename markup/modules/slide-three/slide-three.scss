@@ -1,0 +1,214 @@
+// slide-three
+.section.slide-three {
+	background: $bg-slide-three;
+
+	h2 {
+		margin: 0 0 30px;
+		font-size: 50px;
+		font-weight: 300;
+		text-align: center;
+		color: #fff;
+		@include max-screen(1023px) {
+			font-size: 46px;
+		}
+		@include max-screen(767px) {
+			font-size: 36px;
+		}
+		@include max-screen(480px) {
+			font-size: 24px;
+		}
+	}
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: -0.31em;
+	}
+
+	.tab-content {
+		min-height: 450px;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			@include max-screen(1023px) {
+				&:before {
+					content: '';
+					position: absolute;
+					left: 24px;
+					top: 10px;
+					bottom: 42px;
+					width: 1px;
+					border-left: 2px dashed #fff;
+				}
+			};
+			li {
+				margin-bottom: 40px;
+				padding-left: 70px;
+				position: relative;
+				min-height: 56px;
+				&:before {
+					display: inline-block;
+					height: 52px;
+					vertical-align: middle;
+					content: '';
+				}
+			}
+		}
+		@include max-screen(1023px) {
+			min-height: 0;
+			ul {
+				li {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		@media (max-height: 800px) {
+			min-height: 0;
+			ul {
+				li {
+					margin-bottom: 20px;
+				}
+			}
+			#tabs-2 {
+				ul {
+					li {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+		.icon {
+			left: 6px;
+			top: 0;
+			position: absolute;
+			display: inline-block;
+			vertical-align: middle;
+			width: 40px;
+			height: 40px;
+			background-color: #8a8a8a;
+			border-radius: 50%;
+			svg {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.line {
+		position: absolute;
+		display: none;
+		&-1 {
+			background: url('%=static=%minified-svg/line-1.svg');
+		}
+		&-2 {
+			background: url('%=static=%minified-svg/line-2.svg');
+		}
+	}
+	#tabs-2 {
+		li {
+			margin-bottom: 30px;
+			@media screen and (max-width: 1023px) {
+				margin-bottom: 18px;
+			}
+			@media screen and (max-height: 800px) {
+				margin-bottom: 18px;
+			}
+		}
+	}
+	@media (min-width: 1024px) {
+		.line {
+			display: block;
+			pointer-events: none;
+			&.line-1 {
+				width: 52%;
+				height: 68%;
+				left: 2%;
+				top: 10%;
+			}
+			&.line-2 {
+				width: 54%;
+				height: 90%;
+				left: 2%;
+				top: 0;
+			}
+		}
+		.tab {
+			&-content {
+				height: 0;
+				padding-bottom: 36%;
+				min-height: 0;
+				position: relative;
+				ul {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					li {
+						position: absolute;
+						left: 0;
+					}
+				}
+			}
+			&-pane {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
+		}
+		#tabs-1 {
+			li {
+				span {
+					width: 480px;
+				}
+				left: 0;
+			}
+			li:nth-child(1) {
+				top: 0;
+			}
+			li:nth-child(2) {
+				margin-left: 39%;
+				top: 23%;
+			}
+			li:nth-child(3) {
+				margin-left: 15%;
+				top: 44%;
+			}
+			li:nth-child(4) {
+				margin-left: 52%;
+				top: 72%;
+				span {
+					width: 440px;
+					width: auto;
+				}
+			}
+		}
+		#tabs-2 {
+			li:nth-child(1) {
+				top: 0;
+				left: 0;
+			}
+			li:nth-child(2) {
+				left: 32%;
+				top: 3%;
+			}
+			li:nth-child(3) {
+				top: 8%;
+				left: 53.5%;
+			}
+			li:nth-child(4) {
+				top: 40%;
+				left: 6.5%;
+			}
+			li:nth-child(5) {
+				top: 62%;
+				left: 34%;
+			}
+			li:nth-child(6) {
+				top: 82%;
+				left: 52%;
+			}
+		}
+	}
+}

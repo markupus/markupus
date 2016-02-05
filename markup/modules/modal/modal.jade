@@ -1,0 +1,61 @@
+mixin modal-contactus
+	// Modal contactus
+	#modal-contactus.modal.fade.modal-contactus(tabindex='-1', role='dialog')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span.icon-cross
+				.modal-body
+					+contactus({modal: true})
+				
+mixin modal(data)
+	if !data
+		-data = {}
+	// Modal
+	.modal.fade(tabindex='-1', role='dialog')&attributes({id: 'modal-' + data.index})
+		=data.index
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					.modal-title= data.title
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span.icon-cross
+				.modal-body
+					.desc
+						if typeof(data.desc) != 'string'
+							each text in data.desc
+								p!= text
+						else
+							p!= data.desc
+								
+						if data.quote
+							blockquote
+								if typeof(data.quote.text) != 'string'
+									each text in data.quote.text
+										p!= text
+								else
+									p!= data.quote.text
+								
+								if data.quote.autor || data.quote.post
+									footer
+										if data.quote.autor && data.quote.post
+											cite= data.quote.autor
+											| ,
+											br
+											= data.quote.post
+										else if data.quote.autor && !data.quote.post
+											cite= data.quote.autor
+										else if !data.quote.autor && data.quote.post
+											= data.quote.post
+								
+								
+					if data.link
+						p: a(href="#{data.link.url}", target="_blank").link= data.link.text
+					.text-center
+						img(src="%=staticPrefix=%images/content/#{data.img}", alt="")
+					
+					
+				//-.modal-footer
+					button.btn.btn-default(type='button', data-dismiss='modal') Close
+					button.btn.btn-primary(type='button') Save changes

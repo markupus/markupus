@@ -1,0 +1,120 @@
+body {
+	input, optgroup, select, textarea {
+		color: #000;
+	}
+}
+.light {
+	select {
+		border: 1px solid #000;
+	}
+	&.woocommerce {
+		.woocommerce-ordering select {
+			border: 1px solid #000;
+			padding: 5px 12px;
+		}
+	}
+}
+.woocommerce {
+	form {
+		.form-row {
+			input.input-text,
+			textarea {
+				background: #fff;
+				border: 1px solid #fff;
+				color: #aaa;
+			}
+			label {
+				font-size: 12px;
+				text-transform: uppercase;
+				color: #939393;
+			}
+		}
+	}
+	table.shop_table {
+		a {
+			color: #fff;
+		}
+	}
+	
+	&.light {
+		form {
+			.form-row {
+				input.input-text,
+				textarea {
+					border: 1px solid #dfdfdf;
+				}
+				label {
+					color: #333;
+				}
+			}
+		}
+		table.shop_table {
+			a {
+				color: #000;
+			}
+		}
+	}
+}
+
+#customer_details {
+	border-radius: 0;
+	border: 3px solid #272727;
+	padding: 10px 20px 20px;
+	.light & {
+		border-color: #f8f8f8;
+		background: #f8f8f8;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 13px;
+	}
+}
+
+.woocommerce-checkout #payment {
+	border-radius: 0;
+	border: 3px solid #272727;
+	background: none;
+	.light & {
+		border-color: #f8f8f8;
+		background: #f8f8f8;
+		color: #333;
+	}
+	ul.payment_methods {
+		border: none;
+	}
+	#place_order {
+		border: none;
+		background: #32a50e;
+		font-size: 16px;
+		color: #fff;
+		text-transform: uppercase;
+		display: inline-block;
+		width: 250px;
+		max-width: 100%;
+		text-align: center;
+		border-radius: 0;
+		padding: 14px;
+		&:hover {
+			opacity: 0.8;
+		}
+		&:active,
+		&:focus {
+			border: none;
+		}
+		
+	}
+	.payment_method_paypal {
+		.about_paypal {
+			color: #fff;
+			.light & {
+				color: #000;
+			}
+		}
+	}
+}
+
+.select2-container .select2-choice {
+	border-radius: 0;
+}
+

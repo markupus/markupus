@@ -1,0 +1,23 @@
+//- index.jade
+extends ../modules/layout/layout
+
+block title
+	title Markupus
+
+block vars
+	//-var page = '';
+	//-wrapperClass = ''
+	-bodyClass = 'main-page'
+	-page = 'home'
+
+	
+block header
+	+header
+	
+block content
+	.fullpage
+		+slide-one
+		+slide-two
+		+slide-three
+		+slide-four
+		+slide-five

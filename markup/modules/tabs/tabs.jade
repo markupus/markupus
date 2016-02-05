@@ -1,0 +1,58 @@
+mixin tabs
+	div.tab-holder
+		// Nav tabs
+		ul.nav-tabs(role='tablist')
+			li.active(role='presentation')
+				a(href='#tabs-1', aria-controls='tabs-1', role='tab', data-toggle='tab') Hire full-time remote developer
+			li(role='presentation')
+				a(href='#tabs-2', aria-controls='tabs-2', role='tab', data-toggle='tab') Order single project
+		// Tab panes
+		.tab-content
+			#tabs-1.tab-pane.fade.in.active(role='tabpanel')
+				.line.line-1
+				ul
+					li
+						i.icon
+							+icon({name: 'icon-email-circle'})
+						span Send us your requirements and info about your project
+						
+					li
+						i.icon
+							+icon({name: 'icon-users-circle'})
+						span We assemble developers who both comprehend and are able to satisfy any of your demands
+					li
+						i.icon
+							+icon({name: 'icon-dollar-circle'})
+						span We agree on hourly rate (starts from £14/hour), monthly workload and payment conditions.
+					li
+						i.icon
+							+icon({name: 'icon-tools-circle'})
+						span Manage your developer/team by yourself. We also provide QA service at no extra charge and people to cover in case of illness or other unforeseen circumstances
+			
+			#tabs-2.tab-pane.fade(role='tabpanel')
+				.line.line-2
+				ul
+					li
+						i.icon
+							+icon({name: 'icon-email-circle'})
+						span Send us your design files
+					li
+						i.icon
+							+icon({name: 'icon-users-circle'})
+						span We give you quota
+					li
+						i.icon
+							+icon({name: 'icon-users-circle'})
+						span Make 50% deposit
+					li
+						i.icon
+							+icon({name: 'icon-dollar-circle'})
+						span We produce, test and send you links for review
+					li
+						i.icon
+							+icon({name: 'icon-tools-circle'})
+						span Once satisfied with the job clear the remaining charges
+					li
+						i.icon
+							+icon({name: 'icon-users-circle'})
+						spam Finally, we give you .zip with all source files.

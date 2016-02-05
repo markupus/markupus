@@ -1,0 +1,9 @@
+mixin social(data)
+	if !data
+		-var data = {}
+	ul.social
+		each item in data
+			li
+				a(href="#{item.link}")&attributes({title: item.text})
+					+icon({name: item.icon, class: 'icon ' + item.icon})
+					span.sr-only= item.text

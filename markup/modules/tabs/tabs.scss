@@ -1,0 +1,83 @@
+.tab-holder {
+	@include cf;
+}
+.nav-tabs {
+	padding: 0;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	display: table;
+	li {
+		display: table-cell;
+
+		&.active {
+			a {
+				background: #adadad;
+			}
+		}
+		&:first-child {
+			a {
+				border-radius: 6px 0 0 6px;
+			}
+		}
+		&:last-child {
+			a {
+				border-radius: 0 6px 6px 0;
+			}
+		}
+		& + li {
+			a {
+				border-left: none;
+			}
+		}
+	}
+	a {
+		border: 2px solid #fff;
+		font-size: 25px;
+		text-decoration: none;
+		color: #fff;
+		padding: 8px 20px;
+		display: block;
+		&:hover {
+			background: #adadad;
+		}
+
+		@include max-screen(1024px) {
+			font-size: 16px;
+			padding: 8px;
+		}
+		@include max-screen(480px) {
+			font-size: 14px;
+			padding: 6px;
+		}
+	}
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.tab-pane {
+	position: relative;
+}
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
+}
+.tab-content {
+	font-size: 19px;
+	@include max-screen(1024px) {
+
+	}
+	@include max-screen(767px) {
+		font-size: 16px;
+	}
+}

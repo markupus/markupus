@@ -1,0 +1,49 @@
+a {
+    color: #f06292;
+    text-decoration: underline;
+    &:hover {
+        color: #f06292;
+    }
+}
+
+blockquote {
+	margin: 8px 0;
+	padding: 8px 40px;
+	line-height: 1.45;
+	position: relative;
+	color: #383838;
+	background:#f4ecec;
+    font-size: 14px;
+    &:before {
+        width: 20px;
+        height: 20px;
+    	display: block;
+    	//content: "\201C";
+        content: '';
+        background-image: url('../images/minified-svg/quotes-left.svg');
+    	font-size: 80px;
+    	position: absolute;
+        left: 10px;
+        top: 5px;
+    	color: #7a7a7a;
+        background-size: contain;
+    }
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    footer {
+        margin-top: 16px;
+        font-style: italic;
+    }
+    cite {
+    	margin-top: 5px;
+    }
+}
+
+
+
+.affix {
+  position: fixed;
+}

@@ -1,0 +1,31 @@
+mixin nav
+	if page == 'home'
+		-homeActive = 'active'
+	if page == 'case_studies'
+		-case_studiesActive = 'active'
+	if page == 'team'
+		-teamActive = 'active'
+	nav.nav
+		button.nav-toggle(type='button', data-toggle='collapse', data-target='#nav-collapse', aria-controls='nav', aria-expanded='false')
+			span
+			span
+			span
+		.collapse.nav-collapse#nav-collapse
+			+nav-list()
+		if homeActive
+			a(href="#" data-toggle="scroll" data-target=".contactus-targer").contactus
+				i.icon
+					+icon({name: 'icon-fly'})
+				span Contact us
+		else
+			a(href="#" data-toggle='modal', data-target='#modal-contactus').contactus
+				i.icon
+					+icon({name: 'icon-fly'})
+				span Contact us
+
+mixin nav-list
+	ul&attributes(attributes)
+		li&attributes({class: homeActive}): a(href="/").link Home
+		li&attributes({class: case_studiesActive}): a(href="case_studies.html").link Case studies
+		li&attributes({class: teamActive}): a(href="team.html").link Team
+		//-li&attributes({class: blogActive}): a(href="/blog/").link Blog

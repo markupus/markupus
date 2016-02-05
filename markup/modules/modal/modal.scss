@@ -1,0 +1,230 @@
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+.fade.in {
+	opacity: 1;
+}
+
+.modal-open {
+	overflow: hidden;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+}
+
+.modal.fade .modal-dialog {
+	-webkit-transition: -webkit-transform .3s ease-out;
+	-o-transition: -o-transform .3s ease-out;
+	transition: transform .3s ease-out;
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	-o-transform: translate(0, -25%);
+	transform: translate(0, -25%);
+}
+
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 10px;
+}
+
+.modal-content {
+	position: relative;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border-radius: 0;
+	outline: 0;
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+}
+
+.modal-backdrop.fade {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.modal-backdrop.in {
+	filter: alpha(opacity=50);
+	opacity: .5;
+    &.fade {
+        opacity: .5;
+    }
+}
+
+.modal-header .close {
+	font-size: 22px;
+}
+
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+.modal {
+	.close {
+		z-index: 5;
+		width: 49px;
+		height: 49px;
+		position: absolute;
+        top: -62px;
+        right: -62px;
+		border: none;
+		background-color: #8b8b8b;
+        .icon-cross {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-image: url('%=staticPrefixForCss=%minified-svg/cross.svg');
+        }
+		@include max-screen(1023px) {
+			top: -42px;
+			right: -42px;
+		}
+		@include max-screen(767px) {
+			top: -20px;
+			right: -20px;
+		}
+	}
+
+    &-dialog {
+    	max-width: 780px;
+    	margin: 30px auto;
+    	@include max-screen(767px) {
+    		max-width: 489px;
+    		padding-left: 22px;
+    		padding-right: 22px;
+    	}
+    }
+
+	.contactus-form {
+		margin-top: 0;
+	}
+    &-content {
+        background: #fff;
+        padding: 40px;
+        font-size: 16px;
+        @include max-screen(1023px) {
+            padding: 20px;
+        }
+        a {
+            color: #f06292;
+            text-decoration: underline;
+            word-break: break-word;
+            &:hover {
+                color: #f06292;
+            }
+        }
+    }
+    &-header {
+        text-align: left;
+        position: relative;
+        padding-bottom: 40px;
+        padding-right: 50px;
+        &:after {
+            background: #7f7f7f;
+            height: 1px;
+            width: 165px;
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+        }
+        @include max-screen(1023px) {
+            font-size: 22px;
+            padding-bottom: 20px;
+            &:after {
+                bottom: 10px;
+            }
+        }
+    }
+    &-title {
+        font-size: 30px;
+        color: #00a7e7;
+        font-weight: 800;
+        text-transform: uppercase;
+        @include max-screen(1023px) {
+            font-size: 22px;
+        }
+    }
+
+    &-contactus {
+        .modal-dialog {
+            max-width: 626px;
+            @include max-screen(767px) {
+                max-width: 489px;
+            }
+        }
+        .modal-header {
+            padding: 0;
+            &:after {
+                display: none;
+            }
+        }
+        .modal-content {
+            background: none;
+            padding: 0;
+            @include max-screen(1023px) {
+                padding: 0;
+            }
+        }
+        .close {
+    		right: 42px;
+    		top: 94px;
+            @include max-screen(767px) {
+                top: -20px;
+	            right: -20px;
+            }
+        }
+    }
+
+    .desc {
+        & > p {
+            &:first-child {
+                font-style: italic;
+                &:before {
+                    content: 'Task: ';
+                }
+            }
+        }
+    }
+}

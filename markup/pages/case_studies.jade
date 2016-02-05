@@ -1,0 +1,202 @@
+//- case_studies.jade
+extends ../modules/layout/layout
+
+block title
+	title Case studies & Testimonials : Markupus
+
+block vars
+	//-var page = 'careers';
+	//-wrapperClass = ''
+	//-bodyClass = ''
+	-page = 'case_studies'
+
+block header
+	+header
+	
+block content
+	.container
+		h1.title.sep Case studies
+		p.text-center
+			| Just a few projects we've done for our clients.
+
+		+example-list([
+			{
+				id: 'inxy',
+				title: 'INXY',
+				img_thumb: 'portfolio_inxy.png',
+				img: 'portfolio_inxy.png',
+				future: ['icon-css3', 'icon-html5', 'icon-responcive', 'icon-bootstrap', 'icon-sass', 'icon-svg'],
+				link: {url:'http://inxy.com', text: 'http://inxy.com'},
+				desc: [
+					"Conduct constant development of a front-end for a hosting aggregating agent.",
+					"The feature of a project is its constant upgrading need. For performing A-B testing marketers always issue a challenge as for dislocation of components from one place to another. We made up the modal structure of a front-end, where each block is independent from entourage and can be replaced anywhere inside the net. A detached file holds all the GUI elements which can be used in the project."
+				],
+				quote: {
+					text: [
+						'INXY has been working with Markupus company since July 2015. During this period of collaboration Markupus has shown itself as high quality team of professionals who are able to solve the hardest creative and original tasks and do it as quickly as possible.',
+						'All projects have been fulfilled on time and with the highest quality, amendments (if needed) have been made quickly and without arguments.',
+						'We would like to point out the following qualities of this company: effectiveness, creativity in their work without long search periods.',
+						'We sincerely thank Markupus for their effectiveness and flexibility as well as quality of solutions. We would like to continue collaboration with them on all our projects.'
+					],
+					autor: 'Ruslan Zholik',
+					post: 'CEO at S.S. Telecom & Hosting Group Ltd'
+				}
+			},
+			{
+				id: 'lombardio',
+				title: 'Lombardio',
+				img_thumb: 'portfolio_lombardio.png',
+				img: 'portfolio_lombardio.png',
+				link: {url:'http://www.lombard.io', text: 'http://www.lombard.io'},
+				desc: [
+					'Create fully responsive landing page markup for business-training course.',
+					'We applied BEM methodology, vector graphics for qualitative fetching on retina screens. Were added animated effects. By means of Lazy Load pattern for embed video we managed to optimize a time of pages loading.'
+				],
+				quote: {
+					text: 'Getting the job done in time, these guys are very thorough, had an individual approach to me as an executive person, what more could you possibly ask for? :) I reccomend Markupus for startup projects of any complexity level. Each aspect will be noted and the task will be done in time.',
+					autor: 'Sergey Vostrikov',
+					post: 'Founder of Lomard.io'
+				}
+			},
+			{
+				id: 'makemoney',
+				title: 'Make Money',
+				img_thumb: 'portfolio_2porciya.png',
+				img: 'portfolio_2porciya.png',
+				link: {url:'http://markupus.com/examples/2porciya/', text: 'http://markupus.com/examples/2porciya/'},
+				desc: [
+					'Create fully responsive landing page markup for business-training course.',
+					'We applied BEM methodology, vector graphics for qualitative fetching on retina screens. Were added animated effects. By means of Lazy Load pattern for embed video we managed to optimize a time of pages loading.'
+				]
+			},
+			{
+				id: 'wibo',
+				title: 'Wibo: responsive promo Page',
+				img_thumb: 'portfolio_wibo.png',
+				img: 'portfolio_wibo.png',
+				link: {url:'http://markupus.com/examples/wibo/', text: 'http://markupus.com/examples/wibo/'},
+				desc: [
+					'Creating a nice-looking promo page for a hosting service.',
+					'We composed an adaptive layout with css3 animations, vector graphics for high-grade displaying on retina screens, and also performance was optimized as much as it was possible.  Along with a client we had some hesitations as for opting driving direction of clouds, pace and frequency of flying of an airplane, effects on billets with logos on them. Upshot was that we managed to achieve the outcome which we are pleased to show now.'
+				]
+			},
+			{
+				id: 'flashsafe',
+				title: 'Flashsafe',
+				img_thumb: 'portfolio_flashsafe_dt.png',
+				img: 'portfolio_flashsafe_dt.png',
+				link: {url:'http://markupus.com/examples/flashsafe/', text: 'http://markupus.com/examples/flashsafe/'},
+				desc: [
+					'Creating markup for startup that manufactures infinite flash drives.',
+					'The gear of opting a colour for USB flash drive when pressed was created. In order to gain different colour shades for images we used duplication of an image and filter blur for it. We foresaw ability of youtube videos to work in modals. For qualitative displaying on retina screens we used SVG graphics and 2x images.'
+				]
+			},
+			{
+				id: 'troyads',
+				title: 'TroyAds CDN',
+				img_thumb: 'portfolio_troyads.png',
+				img: 'portfolio_troyads.png',
+				link: {url:'http://markupus.com/examples/troyads/', text: 'http://markupus.com/examples/troyads/'},
+				desc: [
+					'Create a website that sells CDN hosting services.',
+					'According to customer`s brief we made fully adaptive design and a layout for a one page website. On the first screen we placed a vector map of the world with drifted markers on it in places of CDN servers location. There are 2 slides inside the Volume Pricing tab that allow us to select required storage and bandwith meantime observing the bottom-line cost. We used Bootstrap framework in this project.'
+					
+				]
+			},
+			{
+				id: 'diversity',
+				title: 'Diversity',
+				img_thumb: 'portfolio_diversity_dt.png',
+				img: 'portfolio_diversity_dt.png',
+				link: {url:'http://markupus.com/examples/diversity/', text: 'http://markupus.com/examples/diversity/'},
+				desc: [
+					'Redo a promotional website after other developers.',
+					'This website off-loads marketing services, and a customer needs an efficacious design with the highest possible amount of various effects and animations. A contactor who worked here before missed his target and the customer entrusted us with redoing the layout. We inserted animated splash screen during download of a page, made an animation of changing among pages, contrived different effects for each page. After speed of response optimization we managed to reduce the website weight in about 3 times in comparison to that condition it used to be in.'
+				]
+			},
+			{
+				id: 'freecoins',
+				title: 'Freecoins',
+				img_thumb: 'portfolio_freecoins.png',
+				img: 'portfolio_freecoins.png',
+				link: {url:'http://markupus.com/examples/freecoins/', text: 'http://markupus.com/examples/freecoins/'},
+				desc: [
+					'Create a layout for Single Page Application on Meteor.',
+					'According to customer`s prototypes we made a design of a small game, having safed all the necessary file structure. Templates were made using Jade template engine, and Stylus preprocessor was used for stylesheets.'
+				],
+				quote: {
+					text: 'Guys from Markupus completed the task perfectly, and delivered the result on time. Extra points for clear communication. Highly recommended!',
+					autor: 'Denis Gorbachev'
+				}
+			},
+			{
+				id: 'yescredit',
+				title: 'YesCredit',
+				img_thumb: 'portfolio_yescredit.png',
+				img: 'portfolio_yescredit.png',
+				link: {url:'http://markupus.com/examples/yescredit/', text: 'http://markupus.com/examples/yescredit/'},
+				desc: [
+					'Create a landing page for a service that gives a financial aid.',
+					'We made an accurate lending with provision for opting the total credit and amount of days. Was optimized UI/UX for users convenience of different platforms'
+				]
+			},
+			{
+				id: 'gradeup',
+				title: 'GradeUp',
+				img_thumb: 'portfolio_gradeup_dt.png',
+				img: 'portfolio_gradeup_dt.png',
+				link: {url:'http://markupus.com/examples/gradeup/', text: 'http://markupus.com/examples/gradeup/'},
+				desc: [
+					'Create a website for a computer game developement company.',
+					'We created 8 pages using BEM methodology  and modified Bootstrap grid. On the contacts page we adjusted Google Map in accordance with the customer`s design. The website  is optimized only for desktops, a mobile version is thought to appear separately.'
+				],
+				quote: {
+					text: "Serge and his team are truly crackjakers. We have been cooperating for a long time now, and I can hardly remember me having doubts as for opting a performer. They have a thoughtfull approach and a concernment in getting an offsping. I would totally reccomend you Markupus if you need someone you can count on, it's a right team to choose.",
+					autor: 'Vladislav Remin',
+					post: 'CTO at GradeUp Games'
+				}
+			},
+			{
+				id: 'bananadigital',
+				title: 'Banana digital: landing page',
+				img_thumb: 'portfolio_bananadigital_dt.png',
+				img: 'portfolio_bananadigital_dt.png',
+				link: {url:'http://markupus.com/examples/bananadigital/', text: 'http://markupus.com/examples/bananadigital/'},
+				desc: [
+					'Create a markup for landing page of Internet marketing agency.',
+					'In this one page website, we made sticky header, smooth scrolling when pressing on buttons and menu selection, animated effects of different blocks movement, we made an interesting pie chart using canvas. While choosing checkboxes, we see the degree of order`s fullness with available options. Applied a form validation script on client`s side.'
+				]
+			},
+			{
+				id: 'empire',
+				title: 'Empire of Aromats',
+				img_thumb: 'portfolio_empire.png',
+				img: 'portfolio_empire.png',
+				link: {url:'http://markupus.com/examples/empire/', text: 'http://markupus.com/examples/empire/'},
+				desc: [
+					'Work out an ecommerce website for perfumery selling.',
+					'Collaboratively with a designer we drew, coded, and integrated an webstore on OpenCart. An interface was thought out to be easy-to-use on PCs and laptops, and also on touch devices. Consequently, a customer won a full-fledged webstore with a great variety of items, detailed description of an output and comfortable means of purchase arranging in on-line mode.'
+				]
+			},
+			{
+				id: 'mainex',
+				title: 'Mainex',
+				img_thumb: 'portfolio_mainex_dt.png',
+				img: 'portfolio_mainex_dt.png',
+				link: {url:'http://markupus.com/examples/mainex/', text: 'http://markupus.com/examples/mainex/'},
+				desc: [
+					'Create fully responsive landing page markup for business-training course.',
+					'We applied BEM methodology, vector graphics for qualitative fetching on retina screens. Were added animated effects. By means of Lazy Load pattern for embed video we managed to optimize a time of pages loading.'
+				],
+				quote: {
+					text: 'Employees of the Markupus company do their work quickly and efficiently. They all open to requests and suggestions, if you want something to be quickly changed or remake in accordance to the changed requirements. They are always in touch, professionally courteous, not only perform tasks, described in technical solutions, but also can offer advice to the client on specific cases, if they see such a need. We were happy to work with the whole Markupus team and we recommend them to other customers.',
+					autor: 'Alim Firov',
+					post: 'CEO at Mainbox'
+				}
+			},
+		])
+			
+		+need-info
+				
+block footer
+	+footer

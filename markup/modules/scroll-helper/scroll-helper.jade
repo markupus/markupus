@@ -1,0 +1,17 @@
+mixin scroll-helper(slide)
+	if !slide
+		-var slide = 1
+	.scroll-helper
+			a(href="#").next-slide
+				i.icon-scrolling.animated.infinite
+				if slide == 1
+					span Scroll down to see what we do
+
+				if slide == 2
+					span Scroll down to see the process
+
+				if slide == 3
+					span Scroll down to see technologies we use
+
+				if slide == 4
+					span Scroll down to know us better

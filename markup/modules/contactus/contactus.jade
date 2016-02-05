@@ -1,0 +1,29 @@
+mixin contactus(data)
+	if !data
+		-var data = {}
+	-var classMod = ''
+	if data.modal
+		-classMod = 'animated fadeInUp'
+	.contactus-form
+		.letter
+			.stamp
+			.contactus-form-inner&attributes({class: classMod})
+				form(action="verify.php" method="post")
+					.form-group
+						label(for="name" required) Name
+						input(type="text" placeholder="Mark Upus" name="name")#name.form-control
+					.form-group
+						label(for="email" required) Email
+						input(type="email" placeholder="name@domain.com" name="email")#email.form-control
+					.form-group
+						label(for="message").msg Message
+						textarea(placeholder="Hi! I'd like to work with you." required name="msg").form-control
+					.form-group
+						.alert.error
+					.form-group
+						.alert.success
+					.form-group
+						input(type="submit" value="Send Message").btn
+
+//- Thank you for your message!
+//- We will get back to you within 24 hours.

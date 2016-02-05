@@ -1,0 +1,32 @@
+mixin crew-list(data)
+	if !data
+		-var data = {}
+	
+	ul.crew-list
+		-var style = 1;
+		each item in data
+			li&attributes({class: 'style-0'+style})&attributes({class:item.class})
+				//-a(href="#")
+				.item
+					.img-holder.loading
+						img(class="lazy", data-src="%=staticPrefix=%images/content/#{item.img}", src="", alt="")
+					.name= item.name
+					.prof= item.prof
+			-style++
+			if style > 6
+				-style = 1
+
+mixin crew-under-projects-list(data)
+	ul.crew-list.crew-under-projects-list
+		-var style = 1;
+		each item in data
+			li&attributes({class: 'style-0'+style})&attributes({class:item.class})
+				//-a(href="#")
+				.item
+					.img-holder.loading
+						img(class="lazy", data-src="%=staticPrefix=%images/content/#{item.img}", src="", alt="")
+					.name= item.name
+					.prof= item.prof
+			-style++
+			if style > 6
+				-style = 1

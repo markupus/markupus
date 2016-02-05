@@ -1,0 +1,48 @@
+//
+//slide-five
+//
+.fullpage.fp-destroyed .section.slide-five .container {
+	padding-bottom: 0;
+}
+.slide-five {
+	background: #37474f;
+
+	h2 {
+		font-size: 36px;
+		text-align: center;
+		font-family: $ff-open-sans;
+		font-weight: 300;
+		color: #fff;
+	}
+	.links {
+		text-align: center;
+		font-size: 30px;
+		color: #b7b8b8;
+		margin-bottom: 50px;
+		a {
+			display: inline-block;
+			margin: 0 10px;
+			padding: 10px;
+			text-decoration: none;
+			color: #b7b8b8;
+			font-weight: 600;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	@include max-screen(767px) {
+		.links {
+			margin-bottom: 28px;
+			font-size: 26px;
+			a {
+				line-height: 1;
+			}
+		}
+		.sep {
+			text-indent: -9999px;
+			display: block;
+			height: 0;
+		}
+	}
+}

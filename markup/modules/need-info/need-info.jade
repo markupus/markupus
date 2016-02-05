@@ -1,0 +1,9 @@
+mixin need-info
+	.need-info
+		.col
+			if page == 'case_studies'
+				p Need a front end for the next great project?
+			else if page == 'team'
+				p Want to work together? We are always ready to cooperate.
+		.col.right
+			a(href="#", data-toggle='modal', data-target='#modal-contactus') Get in touch

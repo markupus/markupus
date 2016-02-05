@@ -1,0 +1,10 @@
+.section {
+	color: #fff;
+	@include cf;
+	min-height: 100vh;
+	position: relative;
+
+	h2 {
+		font-family: $ff-open-sans;
+	}
+}

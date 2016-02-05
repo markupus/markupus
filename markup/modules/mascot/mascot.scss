@@ -1,0 +1,51 @@
+.mascot {
+	display: inline-block;
+	z-index: 1;
+	position: relative;
+	max-width: 100%;
+	margin-left: 10%;
+
+	@include max-screen(767px) {
+		text-align: center;
+
+		img {
+			width: 60%;
+		}
+	}
+
+	.anim {
+		opacity: 0.1;
+		color: #000;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		display: none;
+		@include min-screen(767px) {
+			display: block;
+		}
+		@media screen and (min-height: 766px) {
+			display: block;
+		}
+		.before {
+			i {
+				opacity: 0;
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				top: 5%;
+			}
+		}
+
+		.after {
+			i {
+				opacity: 0;
+				position: absolute;
+				right: 20%;
+				top: 4%;
+			}
+		}
+	}
+}
